@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@985180904:1521196002210" name="ParseVerticalConfig" version="6.0.1">
+<config>
+<settings>
+<setting name="welcome_prompt">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var ret= JSONPathUtil.eval(inputJSON, "$.cvp.welcomePrompt");
+String(ret);</setting>
+<setting name="questionAnswer1ttstype">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var n = {LocalVar.verticalOptionIndex}
+var ret = JSONPathUtil.eval(inputJSON, "$.mobileOptions[" + n + "].fields[0].ttstype");
+String(ret);</setting>
+<setting name="questionAnswer2ttstype">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var n = {LocalVar.verticalOptionIndex}
+var ret = JSONPathUtil.eval(inputJSON, "$.mobileOptions[" + n + "].fields[1].ttstype");
+String(ret);</setting>
+<setting name="questionAnswer3ttstype">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var n = {LocalVar.verticalOptionIndex}
+var ret = JSONPathUtil.eval(inputJSON, "$.mobileOptions[" + n + "].fields[2].ttstype");
+String(ret);</setting>
+</settings>
+</config>
+</action_element>

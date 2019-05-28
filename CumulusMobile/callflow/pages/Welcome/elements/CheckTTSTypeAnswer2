@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1388003220:1521666079104" name="CheckTTSTypeAnswer2" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckTTSTypeAnswer2" default_exit_state="sayas">
+        <exit_state name="text" conjugate="and">
+            <string operator="equal">
+                <local_variable name="questionAnswer2ttstype" />
+                <constant_string value="text" />
+            </string>
+        </exit_state>
+        <exit_state name="characters" conjugate="and">
+            <string operator="equal">
+                <local_variable name="questionAnswer2ttstype" />
+                <constant_string value="characters" />
+            </string>
+        </exit_state>
+        <exit_state name="creditcard" conjugate="and">
+            <string operator="equal">
+                <local_variable name="questionAnswer2ttstype" />
+                <constant_string value="creditcard" />
+            </string>
+        </exit_state>
+        <exit_state name="currency" conjugate="and">
+            <string operator="equal">
+                <local_variable name="questionAnswer2ttstype" />
+                <constant_string value="currency" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@604504907:1517831504475" name="ParseCSLookup" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="first_name">{LocalVar.first_name}</data>
+<data create_when="After" name="last_name">{LocalVar.last_name}</data>
+<data create_when="After" name="street_address_1">{LocalVar.street_address_1}</data>
+<data create_when="After" name="street_address_2">{LocalVar.street_address_2}</data>
+<data create_when="After" name="city">{LocalVar.city}</data>
+<data create_when="After" name="state">{LocalVar.state}</data>
+<data create_when="After" name="zip">{LocalVar.zip}</data>
+<data create_when="After" name="country">{LocalVar.country}</data>
+<data create_when="After" name="mobile_phone">{LocalVar.mobile_phone}</data>
+<data create_when="After" name="work_phone">{LocalVar.work_phone}</data>
+<data create_when="After" name="home_phone">{LocalVar.home_phone}</data>
+<data create_when="After" name="work_email">{LocalVar.work_email}</data>
+<data create_when="After" name="home_email">{LocalVar.home_email}</data>
+<data create_when="After" name="vertical_id">{LocalVar.vertical_id}</data>
+<data create_when="After" name="customer_external_id">{LocalVar.customer_external_id}</data>
+</log>
+<settings>
+<setting name="first_name">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_First_Name");
+String(ret);</setting>
+<setting name="last_name">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Last_Name");
+String(ret);</setting>
+<setting name="street_address_1">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Street_Address_1");
+String(ret);</setting>
+<setting name="street_address_2">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Street_Address_2");
+String(ret);</setting>
+<setting name="city">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_City");
+String(ret);</setting>
+<setting name="state">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_State");
+String(ret);</setting>
+<setting name="zip">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_ZIP");
+String(ret);</setting>
+<setting name="country">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Country");
+String(ret);</setting>
+<setting name="mobile_phone">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Mobile_Phone");
+String(ret);</setting>
+<setting name="work_phone">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Work_Phone");
+String(ret);</setting>
+<setting name="home_phone">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Home_Phone");
+String(ret);</setting>
+<setting name="work_email">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Work_Email");
+String(ret);</setting>
+<setting name="home_email">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Home_Email");
+String(ret);</setting>
+<setting name="customer_external_id">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Customer_External_ID");
+String(ret);</setting>
+<setting name="preferred_language">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Preferred_Language");
+String(ret);</setting>
+<setting name="vertical_id">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Element.CSLookup.search_result_as_json}
+var ret = JSONPathUtil.eval(inputJSON, "$[0].Context_Vertical_ID");
+String(ret);</setting>
+</settings>
+</config>
+</action_element>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1733394125:1516903474454" name="ParseMobileAppAnswer" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="userName">{LocalVar.userName}</data>
+<data create_when="After" name="emailAddress">{LocalVar.emailAddress}</data>
+<data create_when="After" name="company">{LocalVar.company}</data>
+<data create_when="After" name="phoneNumber">{LocalVar.phoneNumber}</data>
+<data create_when="After" name="verticalName">{LocalVar.verticalName}</data>
+<data create_when="After" name="optionLabel">{LocalVar.optionLabel}</data>
+<data create_when="After" name="questionLabel1">{LocalVar.questionLabel1}</data>
+<data create_when="After" name="questionAnswer1">{LocalVar.questionAnswer1}</data>
+<data create_when="After" name="questionLabel2">{LocalVar.questionLabel2}</data>
+<data create_when="After" name="questionAnswer2">{LocalVar.questionAnswer2}</data>
+<data create_when="After" name="questionLabel3">{LocalVar.questionLabel3}</data>
+<data create_when="After" name="questionAnswer3">{LocalVar.questionAnswer3}</data>
+<data create_when="After" name="gpsLatitude">{LocalVar.gpsLatitude}</data>
+<data create_when="After" name="gpsLongitude">{LocalVar.gpsLongitude}</data>
+</log>
+<settings>
+<setting name="dataCenter">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.dataCenter");
+String(ret);</setting>
+<setting name="sessionId">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.sessionId");
+String(ret);</setting>
+<setting name="userName">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.userName");
+String(ret);</setting>
+<setting name="emailAddress">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.emailAddress");
+String(ret);</setting>
+<setting name="company">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.company");
+String(ret+" ");</setting>
+<setting name="phoneNumber">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.phoneNumber");
+String(ret);</setting>
+<setting name="gpsLatitude">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.gpsLatitude");
+String(ret);</setting>
+<setting name="gpsLongitude">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.gpsLongitude");
+String(ret);</setting>
+<setting name="notificationId">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.notificationId");
+String(ret);</setting>
+<setting name="verticalName">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalName");
+String(ret);</setting>
+<setting name="verticalId">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalId");
+String(ret);</setting>
+<setting name="verticalOptionName">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOption.name");
+String(ret);</setting>
+<setting name="verticalOptionIndex">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+String(ret);</setting>
+<setting name="optionLabel">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionLabel");
+String(ret);</setting>
+<setting name="questionLabel1">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[0].questionLabel");
+String(ret);</setting>
+<setting name="questionAnswer1">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[0].questionAnswer");
+String(ret);</setting>
+<setting name="questionAnswer1lc">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[0].questionAnswer");
+String(ret).toLowerCase();</setting>
+<setting name="questionLabel2">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[1].questionLabel");
+String(ret);</setting>
+<setting name="questionAnswer2">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[1].questionAnswer");
+String(ret);</setting>
+<setting name="questionAnswer2lc">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[1].questionAnswer");
+String(ret).toLowerCase();</setting>
+<setting name="questionLabel3">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[2].questionLabel");
+String(ret);</setting>
+<setting name="questionAnswer3">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[2].questionAnswer");
+String(ret);</setting>
+<setting name="questionAnswer3lc">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_mobile_app_answer}
+var n = JSONPathUtil.eval(inputJSON, "$.verticalOption.index");
+var ret = JSONPathUtil.eval(inputJSON, "$.verticalOptions[" + n + "].optionQuestions[2].questionAnswer");
+String(ret).toLowerCase();</setting>
+</settings>
+</config>
+</action_element>

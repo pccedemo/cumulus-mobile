@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@416959622:1517513571411" name="SetReturnVarsNoCS" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="call_reason">Mobile App Call</data>
+<data create_when="After" name="call_sub_reason">No Context Service Information</data>
+</session_data>
+</config>
+</action_element>

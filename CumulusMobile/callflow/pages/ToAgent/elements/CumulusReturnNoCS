@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@323530026:1517513241129" name="CumulusReturnNoCS" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">{Data.Session.call_reason}</setting>
+<setting name="FromExtVXML0">{Data.Session.first_name} {Data.Session.last_name}</setting>
+<setting name="FromExtVXML1">{Data.Session.call_sub_reason}</setting>
+<setting name="FromExtVXML2"/>
+<setting name="FromExtVXML3"/>
+</settings>
+</config>
+</subdialog_return>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@491305119:1500682728204" name="PODAddMobileAppData" version="6.0.1">
+<config>
+<settings>
+<setting name="customerId">{Data.Session.customer_id}</setting>
+<setting name="tags">{LocalVar.optionLabel}</setting>
+<setting name="fieldsets">cisco.base.pod,cisco.dcloud.cumulus.mobile</setting>
+<setting name="Context_Notes">{LocalVar.verticalName}</setting>
+<setting name="Context_POD_Activity_Link">https://mm.cxdemo.net/api/v1/answers/{CallData.ANI}</setting>
+<setting name="Context_Mobile_User_Name">{LocalVar.userName}</setting>
+<setting name="Context_Mobile_User_Email">{LocalVar.emailAddress}</setting>
+<setting name="Context_Mobile_User_Company">{LocalVar.company}</setting>
+<setting name="Context_Mobile_User_Phone">{LocalVar.phoneNumber}</setting>
+<setting name="Context_Mobile_Company">{LocalVar.verticalName}</setting>
+<setting name="Context_Mobile_Selected_Option">{LocalVar.optionLabel}</setting>
+<setting name="Context_Mobile_Question_Label1">{LocalVar.questionLabel1}</setting>
+<setting name="Context_Mobile_Question_Answer1">{LocalVar.questionAnswer1}</setting>
+<setting name="Context_Mobile_Question_Label2">{LocalVar.questionLabel2}</setting>
+<setting name="Context_Mobile_Question_Answer2">{LocalVar.questionAnswer2}</setting>
+<setting name="Context_Mobile_Question_Label3">{LocalVar.questionLabel3}</setting>
+<setting name="Context_Mobile_Question_Answer3">{LocalVar.questionAnswer3}</setting>
+<setting name="Context_Mobile_Photo">https://mm.cxdemo.net/api/v1/photos/{CallData.ANI}</setting>
+<setting name="Context_Mobile_GPS_Latitude">{LocalVar.gpsLatitude}</setting>
+<setting name="Context_Mobile_GPS_Longitude">{LocalVar.gpsLongitude}</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@28304370:1453683737107" name="MobileAppAnswer" version="6.0.1">
+<element height="46" id="Element@10365397:1453683737107" name="MobileAppAnswer" type="Page Entry" width="148" x="26" y="12">
+<exit_states>
+<exit_state name="next" target="Element@2014587138:1516897149191"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2014587138:1516897149191" name="GetMobileAppAnswer" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="166" x="17" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1223626383:1517420288537"/>
+<exit_state name="Java Exception-Any" target="Element@342192603:1535569303615"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1733394125:1516903474454" name="ParseMobileAppAnswer" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="176" x="12" y="264">
+<exit_states>
+<exit_state name="done" target="Element@359621638:1521195598053"/>
+</exit_states>
+</element>
+<element height="46" id="Element@919673239:1517335056543" name="PlayNoMobileAppAnswer" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="186" x="480" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1424760863:1517420223552"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1424760863:1517420223552" name="SetNoMobileAppAnswer" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="180" x="483" y="180">
+<exit_states>
+<exit_state name="done" target="Element@555194861:1517420376865"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1223626383:1517420288537" name="SetMobileAppAnswer" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="164" x="18" y="180">
+<exit_states>
+<exit_state name="done" target="Element@1733394125:1516903474454"/>
+</exit_states>
+</element>
+<element height="46" id="Element@555194861:1517420376865" name="ToAgent" type="Page Connector" width="100" x="523" y="264">
+<page_connector target="Element@1410198995:1500682728204">ToAgent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@477353572:1517420847929" name="Welcome" type="Page Connector" width="100" x="50" y="516">
+<page_connector target="Element@1472762474:1517420779663">Welcome<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@359621638:1521195598053" name="GetVerticalConfig" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="143" x="28" y="348">
+<exit_states>
+<exit_state name="done" target="Element@985180904:1521196002210"/>
+<exit_state name="Java Exception-Any" target="Element@959783112:1535572174449"/>
+</exit_states>
+</element>
+<element height="46" id="Element@985180904:1521196002210" name="ParseVerticalConfig" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="153" x="23" y="432">
+<exit_states>
+<exit_state name="done" target="Element@477353572:1517420847929"/>
+</exit_states>
+</element>
+<element height="46" id="Element@342192603:1535569303615" name="GetMobileAppAnswer_2" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="177" x="240" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1223626383:1517420288537">
+<bendpoint>
+<dim1 x="0" y="84"/>
+<dim2 x="228" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Java Exception-Any" target="Element@919673239:1517335056543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@959783112:1535572174449" name="GetVerticalConfig_2" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="154" x="252" y="348">
+<exit_states>
+<exit_state name="done" target="Element@985180904:1521196002210">
+<bendpoint>
+<dim1 x="-1" y="83"/>
+<dim2 x="229" y="-1"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Java Exception-Any" target="Element@919673239:1517335056543">
+<bendpoint>
+<dim1 x="-1" y="-140"/>
+<dim2 x="-245" y="112"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>
